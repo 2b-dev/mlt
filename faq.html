@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Medical Leaders Thailand</title>
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/custom.css" />
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script>
+      $(function () {
+        validateEmailForgotPassword = function () {
+          showModal("msg-modal");
+        };
+
+        $("body").on("submit", "#forgot-pass", function () {
+          validateEmailForgotPassword();
+          return false;
+        });
+
+        // CONTACT
+        validateContactForm = function () {
+          showModal("contact-modal");
+        };
+
+        $("body").on("submit", "#contact-form", function () {
+          validateContactForm();
+          return false;
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <div id="toggleMenu" class="modal modalMenu">
+      <div class="modal-block -center">
+        <div class="modal-inner">
+          <div class="hide-modal circle-close-btn">
+            <div class="custom-x-icon"></div>
+          </div>
+          <ul class="ul-toggleMenu">
+            <li>
+              <a href="index.html"> Home </a>
+            </li>
+            <li>
+              <a href="aboutus.html"> About us </a>
+            </li>
+            <li>
+              <a href="faq.html"> FAQS </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="sign-in-modal" class="modal">
+      <div class="modal-block -center">
+        <div class="modal-inner">
+          <div class="hide-modal circle-close-btn">
+            <div class="custom-x-icon"></div>
+          </div>
+          <div class="main-logo -med"></div>
+
+          <form action="index2.html" class="form-wrap -med">
+            <div class="input-block -floating">
+              <input placeholder=" " class="input" type="text" name="user" />
+              <label class="label -floating">Username</label>
+              <span class="error-txt">Username is incorrect!</span>
+            </div>
+            <!-- End input-block -->
+
+            <div class="input-block -floating">
+              <input
+                placeholder=" "
+                class="input"
+                type="password"
+                name="password"
+              />
+              <label class="label -floating">Password</label>
+              <!-- <span class="error-txt">Password is incorrect!</span> -->
+            </div>
+            <!-- End input-block -->
+
+            <div class="button-wrap">
+              <button type="submit" class="cmn-button -med -orange">
+                Sign in
+              </button>
+              <button
+                type="button"
+                class="cmn-button -med -transparent -block call-modal"
+                data-modal="forgot-modal"
+              >
+                Forgot passwords
+              </button>
+            </div>
+          </form>
+          <!-- End form-wrap -->
+        </div>
+        <!-- End modal-inner -->
+      </div>
+      <!-- End modal-block -->
+    </div>
+    <!-- End modal -->
+
+    <div id="forgot-modal" class="modal">
+      <div class="modal-block -center">
+        <div class="modal-inner">
+          <div class="hide-modal circle-close-btn">
+            <div class="custom-x-icon"></div>
+          </div>
+          <div class="main-logo -med"></div>
+
+          <form id="forgot-pass" action="" class="form-wrap -med">
+            <div class="input-block -floating">
+              <input placeholder=" " class="input" type="email" name="email" />
+              <label class="label -floating">Email</label>
+              <span class="error-txt">Email is incorrect!</span>
+            </div>
+            <!-- End input-block -->
+
+            <div class="button-wrap">
+              <button type="submit" class="cmn-button -med -orange">
+                Confirm
+              </button>
+            </div>
+          </form>
+          <!-- End form-wrap -->
+        </div>
+        <!-- End modal-inner -->
+      </div>
+      <!-- End modal-block -->
+    </div>
+    <!-- End modal -->
+
+    <!-- End modal -->
+    <div id="msg-modal" class="modal">
+      <div class="modal-block -center">
+        <div class="modal-inner">
+          <div class="hide-modal circle-close-btn">
+            <div class="custom-x-icon"></div>
+          </div>
+          <div class="main-logo -med"></div>
+
+          <div class="modal-content-block">
+            <p class="prg align-center">
+              The new password will be sent to your email please check your
+              inbox
+            </p>
+
+            <div class="button-wrap">
+              <button type="button" class="cmn-button hide-modal -med -orange">
+                Close
+              </button>
+            </div>
+          </div>
+          <!-- End modal-content-block -->
+        </div>
+        <!-- End modal-inner -->
+      </div>
+      <!-- End modal-block -->
+    </div>
+    <!-- End modal -->
+
+    <div id="contact-modal" class="modal">
+      <div class="modal-block -center">
+        <div class="modal-inner">
+          <div class="hide-modal circle-close-btn">
+            <div class="custom-x-icon"></div>
+          </div>
+          <div class="main-logo -med"></div>
+
+          <div class="modal-content-block">
+            <p class="prg align-center">We will contact you soon</p>
+
+            <div class="button-wrap">
+              <button type="button" class="cmn-button hide-modal -med -orange">
+                OK
+              </button>
+            </div>
+          </div>
+          <!-- End modal-content-block -->
+        </div>
+        <!-- End modal-inner -->
+      </div>
+      <!-- End modal-block -->
+    </div>
+    <!-- End modal -->
+
+    <header>
+      <a class="main-logo call-modal" data-modal="toggleMenu"></a>
+      <div class="header-left-bg"></div>
+      <div class="header-nav-bg"></div>
+
+      <nav class="header-nav">
+        <ul class="nav-list">
+          <li class="nal-list-item d-sm-none">
+            <a href="index.html" class="nav-list-txt">HOME</a>
+          </li>
+          <li class="nal-list-item d-sm-none">
+            <a href="aboutus.html" class="nav-list-txt">ABOUT US</a>
+          </li>
+          <li class="nal-list-item d-sm-none">
+            <a href="faq.html" class="nav-list-txt">FAQS</a>
+          </li>
+          <li class="nal-list-item">
+            <a href="#" class="nav-list-txt">Register</a>
+          </li>
+          <li class="nal-list-item -js">
+            <a
+              href="#"
+              class="nav-list-txt call-modal"
+              data-modal="sign-in-modal"
+              >Sign in</a
+            >
+          </li>
+        </ul>
+        <!-- End nav-list -->
+      </nav>
+      <!-- End header-nav -->
+    </header>
+    <!-- End header -->
+
+    <section class="info-block paddingOtherPage">
+      <h2 class="title green-txt -center">FAQ</h2>
+
+      <div class="info-block-inner">
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <p class="txtQ">Who are the translators?</p>
+            <p class="txtA">
+              We have experienced team members translating original articles
+              into Thai language and have physicians to proof them at least 2
+              times before uploading them onto the Medical Leader Thailand’s
+              application.
+            </p>
+            <p class="txtQ">
+              Who produces the content in the ‘MLT Original’ section?
+            </p>
+            <p class="txtA">
+              The production of the MLT Original content is led by Mr. Hiroo
+              Matsui, Secretary of the Medical Journalists Association of Japan.
+            </p>
+            <p class="txtQ">Who selects the news topics?</p>
+            <ol class="mt-0">
+              <li class="txtA">
+                For English articles, our team’s physician is the one who
+                selects the topic daily.
+              </li>
+              <li class="txtA">
+                Japanese articles are chosen from topics that obtain the most
+                likes and shares by Japanese medical professionals and
+                medical-related personnel.
+              </li>
+            </ol>
+            <p class="txtQ">
+              Who is the administrator of the Board’s function?
+            </p>
+            <p class="txtA">
+              In order to maintain all topics and comments to have
+              appropriateness, we have a physician as an administrator to
+              monitor them.
+            </p>
+            <p class="txtQ">
+              Are there any links to the full original journals?
+            </p>
+            <p class="txtA">Yes.</p>
+          </div>
+          <div class="col-12 col-md-6">
+            <p class="txtQ">Who writes the Medical Tribune content?</p>
+            <p class="txtA">Top-line Japanese physicians.</p>
+            <p class="txtQ">
+              Can I have access to the full content in the original website?
+            </p>
+            <p class="txtA">
+              Yes, you can access to full articles by clicking on the links in
+              each news (Original language).
+            </p>
+            <p class="txtQ">
+              Can I login the same account with several devices at the same
+              time?
+            </p>
+            <p class="txtA">
+              No, you can access to MLT with only one device at a time.
+            </p>
+            <p class="txtQ">What should I do if I forget my password?</p>
+            <p class="txtA">To reset the password,</p>
+            <ol class="mt-0">
+              <li class="txtA">
+                Click on ``Forget the password?`` on login page.
+              </li>
+              <li class="txtA">Enter your e-mail and select your birthday.</li>
+              <li class="txtA">
+                The new password will be sent to your registered e-mail.
+              </li>
+            </ol>
+
+            <p class="txtQ">How do I register?</p>
+            <p class="txtA">
+              You can register to MLT via application/website by using the
+              following steps:
+            </p>
+            <ol class="mt-0">
+              <li class="txtA">Click on “Register”</li>
+              <li class="txtA">Fill out all information required</li>
+              <li class="txtA">
+                Wait for verification code via e-mail > Enter the code
+              </li>
+              <li class="txtA">
+                Follow the instructions to complete your registration
+              </li>
+            </ol>
+
+            <p class="txtQ">
+              How to change the password after I completed the register?
+            </p>
+            <p class="txtA">
+              Please change your password using the following steps:
+            </p>
+            <ol class="mt-0">
+              <li class="txtA">
+                Go to ``My Page`` tab > Tab ``Edit my profile``
+              </li>
+              <li class="txtA">Choose ``Change Password``</li>
+              <li class="txtA">
+                Enter a new password and select ``Save Password``
+              </li>
+            </ol>
+            <p class="txtQ">
+              Can I share my opinion about the App or request topics I would
+              like to read?
+            </p>
+            <p class="txtA">
+              Yes, you can go to ``My Page`` and tab on the bottom right corner
+              of your screen.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-cols">
+          <h4>ASEC Frontier (Thailand) Co., Ltd.</h4>
+          <p>
+            Address : 1 Empire Tower, Unit 1509 15th floor South Sathorn road
+            Yannawa Sathorn Bangkok, Thailand 10120<br />
+            Tel : +662-118-0873<br />
+            Email : enquiries@medical-master-thailand.com<br />
+            Website :
+            <a
+              class="green-txt -underline"
+              href="http://www.asec-frontier.com"
+              target="_blank"
+              >www.asec-frontier.com</a
+            >
+          </p>
+          <br />
+
+          <h4>Social Media</h4>
+          <ul class="social-block">
+            <li class="social-list">
+              <a href="#" target="_blank"
+                ><img src="images/icons/line-icon.jpg" alt=""
+              /></a>
+            </li>
+            <li class="social-list">
+              <a href="#" target="_blank"
+                ><img src="images/icons/facebook-icon.jpg" alt=""
+              /></a>
+            </li>
+          </ul>
+          <!-- End social-block -->
+        </div>
+        <!-- End footer-cols -->
+
+        <div id="contact" class="footer-cols">
+          <h4>Contact Us</h4>
+
+          <form id="contact-form" action="" class="form-wrap">
+            <div class="input-block -floating">
+              <input
+                placeholder=" "
+                class="input -med"
+                type="text"
+                name="name"
+              />
+              <label class="label -floating">Your Name (*)</label>
+              <span class="error-txt">Please enter your name</span>
+            </div>
+            <!-- End input-block -->
+
+            <div class="input-block -floating">
+              <input
+                placeholder=" "
+                class="input -med"
+                type="email"
+                name="email"
+              />
+              <label class="label -floating">Your Email (*)</label>
+              <!-- <span class="error-txt">Your Email is incorrect!</span> -->
+            </div>
+            <!-- End input-block -->
+
+            <div class="input-block -floating">
+              <input
+                placeholder=" "
+                class="input -med"
+                type="email"
+                name="email"
+              />
+              <label class="label -floating">Subject (*)</label>
+              <!-- <span class="error-txt">Please enter your subject</span> -->
+            </div>
+            <!-- End input-block -->
+
+            <div class="input-block -floating">
+              <textarea
+                placeholder=" "
+                class="input -med"
+                type="text"
+                name="message"
+              ></textarea>
+              <label class="label -floating">Your Message (*)</label>
+              <!-- <span class="error-txt">Please enter your message</span> -->
+            </div>
+            <!-- End input-block -->
+
+            <div class="button-wrap">
+              <button type="submit" class="cmn-button -med -orange">
+                <span class="send-icon"></span> SEND
+              </button>
+            </div>
+          </form>
+          <!-- End form-wrap -->
+        </div>
+        <!-- End footer-cols -->
+      </div>
+      <!-- End footer-inner -->
+
+      <div class="footer-bottom">
+        © Medical Leaders Thailand. All Rights Reserved.
+      </div>
+
+      <div class="bg-1"></div>
+    </footer>
+
+    <div class="modal-overlay -js"></div>
+
+    <script type="text/javascript" src="js/swiper.min.js"></script>
+    <script>
+      var topBannerSwiper = new Swiper(".top-banner-swiper", {
+        loop: true,
+        effect: "fade",
+        fadeEffect: {
+          crossFade: true,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          type: "bullets",
+          clickable: true,
+        },
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+      });
+    </script>
+  </body>
+</html>

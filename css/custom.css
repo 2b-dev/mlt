@@ -130,6 +130,190 @@
   width: 100%;
   max-width: 450px;
 }
+.txtMedticalTribune{
+  font-size: 20px;
+  color: #333;
+  text-align: justify;
+  text-indent: 50px;
+}
+.txtMedticaltribunePerson{
+  font-size: 20px;
+  color: #333;
+  text-align: right;
+}
+.square-block-nav .square-block-list-item{
+  flex-direction: column;
+}
+.txtTitleModalMoreDetail{
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 0;
+}
+.txtModalMoreDetail{
+  font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 0.3rem;
+}
+.mt-0{
+  margin-top: 0!important;
+}
+.mt-1{
+  margin-top: 0.25rem!important;
+}
+.mb-0{
+  margin-bottom: 0!important;
+}
+.mb-1{
+  margin-bottom: 0.25rem!important;
+}
+.mb-2{
+  margin-bottom: 0.5rem!important;
+}
+.mb-3{
+  margin-bottom: 1rem!important;
+}
+.paddingOtherPage{
+  padding-top: 3rem;
+}
+.txtDetailAboutUs{
+  font-size: 18px;
+  color: #333;
+  font-weight: 300;
+}
+.img-ceo{
+  float: right;
+}
+.font-weight-bold{
+  font-weight: 500;
+}
+.boxAdvisory{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 1rem;
+}
+.boxAdvisory img{
+  width: 120px;
+  margin-right: 2rem;
+}
+.boxAdvisory .txtNameAdvisory{
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.boxAdvisory .txtPositionAdvisory{
+  font-size: 16px;
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.row{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.txtQ{
+  font-size: 22px;
+  margin-bottom: 0;
+}
+.txtA{
+  font-size: 18px;
+  margin-top: 0.2rem;
+  margin-bottom: 0.5rem;
+  color: #666;
+  font-weight: 300;
+}
+@media screen and (max-width: 767px){
+  .info-mlt .list-card-info-mlt{
+    width: 94%;
+    flex: 0 0 94%;
+    max-width: 94%;
+  }
+  .logoMedTri{
+    width: 80%;
+  }
+  .txtMedticalTribune{
+    font-size: 16px;
+  }
+  .txtMedticaltribunePerson{
+    font-size: 15px;
+  }
+  .partnerDetail{
+    font-size: 16px;
+  }
+  .info-mlt .list-card-info-mlt p{
+    font-size: 16px;
+  }
+  .d-sm-none{
+    display: none!important;
+  }
+  .modal.modalMenu{
+    left: 0;
+    top: 0px;
+    transform: translateX(0%) translateY(0%);
+    -webkit-transform: translateX(0%) translateY(0%);
+  }
+  .modal.modalMenu .modal-block{
+    width: 100vw;
+    border-radius: 0;
+  }
+  .ul-toggleMenu{
+    list-style: none;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 0;
+  }
+  .ul-toggleMenu li{
+    display: block;
+    width: 100%;
+    padding: 0.35rem 1.5rem;
+    text-align: center;
+  }
+  .ul-toggleMenu li a {
+    text-decoration: none;
+    color: #f26e24;
+    text-align: center;  
+  }
+  .boxAdvisory{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  .boxAdvisory img{
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+  .boxAdvisory p{
+    text-align: center;
+  }
+  .col-12{
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media screen and (min-width: 768px){
+  .modal.modalMenu{
+    display: none!important;
+  }
+  .col-md-6{
+    width: 45%;
+    max-width: 45%;
+    flex: 0 0 45%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
 @media screen and (min-width: 1000px){
   .square-block-nav .square-block-icon{
     margin-bottom: 10px;

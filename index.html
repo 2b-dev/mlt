@@ -34,6 +34,26 @@
   </head>
 
   <body>
+    <div id="toggleMenu" class="modal modalMenu">
+      <div class="modal-block -center">
+        <div class="modal-inner">
+          <div class="hide-modal circle-close-btn">
+            <div class="custom-x-icon"></div>
+          </div>
+          <ul class="ul-toggleMenu">
+            <li>
+              <a href="index.html"> Home </a>
+            </li>
+            <li>
+              <a href="aboutus.html"> About us </a>
+            </li>
+            <li>
+              <a href="faq.html"> FAQS </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
     <div id="sign-in-modal" class="modal">
       <div class="modal-block -center">
         <div class="modal-inner">
@@ -112,7 +132,68 @@
       <!-- End modal-block -->
     </div>
     <!-- End modal -->
-
+    <div id="moredetail" class="modal">
+      <div class="modal-block -center">
+        <div class="modal-inner">
+          <div class="hide-modal circle-close-btn">
+            <div class="custom-x-icon"></div>
+          </div>
+          <p class="txtTitleModalMoreDetail">News Categories</p>
+          <p class="txtModalMoreDetail">
+            <strong>TOP : </strong>The latest articles of the week.
+          </p>
+          <p class="txtModalMoreDetail">
+            <strong>MEDICAL : </strong>Latest worldwide medical in formation and
+            research in each medical department.
+          </p>
+          <p class="txtModalMoreDetail">
+            <strong>MEDICINE : </strong>Provides worldwide news and information
+            about the latest pharmaceutical developments directly from
+            international pharmaceutical companies and etc.
+          </p>
+          <p class="txtModalMoreDetail">
+            <strong>MEDTECH : </strong>Innovations regarding worldwide medical
+            devices and equipment provided by medical device and equipment
+            companies around the world.
+          </p>
+          <p class="txtModalMoreDetail">
+            <strong>MLT ORIGINAL : </strong>Interviews and contributions by
+            medical professionals.
+          </p>
+          <ul class="mt-0 mb-0">
+            <li class="txtModalMoreDetail">
+              <strong>Doctor's Eye</strong><br />
+              Doctors own valued experience and knowledge with hints about "true
+              medical care".
+            </li>
+            <li class="txtModalMoreDetail">
+              <strong>Good Doctors</strong><br />
+              Thai doctors introduce their own clinical notes and synthesize
+              selected journals with infographic and slide images.
+            </li>
+            <li class="txtModalMoreDetail">
+              <strong>Conference Report</strong><br />
+              The reports from Thai academic conference.
+            </li>
+          </ul>
+          <p class="txtModalMoreDetail">
+            <strong>LIFESTYLE : </strong>Diverse content of interest about
+            travel, health, beauty, cuisine and other trends for medical
+            professionals.
+          </p>
+          <p class="txtModalMoreDetail">
+            <strong>JOURNAL : </strong>Latest Thai and International journals
+            with permission of usage.
+          </p>
+          <p class="txtModalMoreDetail">
+            <strong>CPE : </strong>Alternative way to earn your CPE credit.
+          </p>
+        </div>
+        <!-- End modal-inner -->
+      </div>
+      <!-- End modal-block -->
+    </div>
+    <!-- End modal -->
     <div id="msg-modal" class="modal">
       <div class="modal-block -center">
         <div class="modal-inner">
@@ -167,19 +248,19 @@
     <!-- End modal -->
 
     <header>
-      <a href="index.html" class="main-logo"></a>
+      <a class="main-logo call-modal" data-modal="toggleMenu"></a>
       <div class="header-left-bg"></div>
       <div class="header-nav-bg"></div>
 
       <nav class="header-nav">
         <ul class="nav-list">
-          <li class="nal-list-item">
+          <li class="nal-list-item d-sm-none">
             <a href="index.html" class="nav-list-txt">HOME</a>
           </li>
-          <li class="nal-list-item">
+          <li class="nal-list-item d-sm-none">
             <a href="aboutus.html" class="nav-list-txt">ABOUT US</a>
           </li>
-          <li class="nal-list-item">
+          <li class="nal-list-item d-sm-none">
             <a href="faq.html" class="nav-list-txt">FAQS</a>
           </li>
           <li class="nal-list-item">
@@ -367,7 +448,12 @@
                     <li>etc</li>
                   </ul>
                   <div class="text-center">
-                    <button class="btn btnMoreDeatil">More details</button>
+                    <button
+                      class="btn btnMoreDeatil call-modal"
+                      data-modal="moredetail"
+                    >
+                      More details
+                    </button>
                   </div>
                 </div>
               </div>
@@ -476,20 +562,42 @@
     </section>
     <section class="info-block">
       <h2 class="title green-txt -center">
-        <img src="./images/icons/MedicalTribuneCorpolateLogo.jpg" class="logoMedTri" />
+        <img
+          src="./images/icons/MedicalTribuneCorpolateLogo.jpg"
+          class="logoMedTri"
+        />
       </h2>
 
       <div class="info-block-inner">
-        <ul class="partnerDetail">
-          <li>
-            Since 1968, Medical tribune has been providing the latest medical
-            and healthcare information to Japanese medical professionals. MLT is
-            the only application in Thailand in a signed contract with “Medical
-            Tribune”
-          </li>
-          <li>The No.1 and largest Japanese medical news source.</li>
-          <li>120,000 registered subscribers (as of Oct 2019)</li>
-        </ul>
+        <p class="txtMedticalTribune">
+          Medical Tribune (Japanese edition) was first published in 1968 as the
+          international medical newspaper, which was the first medical
+          information magazine in Japan. Currently, we deliver a paper magazine
+          with full of medical and treatment trends twice a month to 80,000
+          readers. In 2007, in response to the demands changing over time, we
+          launched the Medical Tribune’s website to keep everyone update with
+          the latest medical information. There are over 130,000 members that
+          are doctors using our website.
+        </p>
+        <p class="txtMedticalTribune">
+          In order to develop media operations management, we, the Medical
+          Tribune’s editorial department, are working hard to gather information
+          by interviewing nearly 100 medical associations in Japan and overseas
+          each year and checking all articles every day. We also try our best to
+          disseminate in-depth information by collecting and writing requests to
+          medical specialists who are in the leading position in each
+          specialized field and front-line researchers
+        </p>
+        <p class="txtMedticalTribune">
+          By reading Medical Tribune’s articles through Medical Leaders
+          Thailand, all members will be able to know the upcoming medical
+          treatment. To all medical personnel in Thailand, please be sure to
+          catch up with this great opportunity.
+        </p>
+        <p class="txtMedticaltribunePerson">
+          Senior Editorial Director / Corporate Executive Officer,<br />Naoki
+          Hirata
+        </p>
       </div>
     </section>
     <footer>

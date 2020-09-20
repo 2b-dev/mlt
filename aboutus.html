@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Medical Leaders Thailand</title>
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/custom.css" />
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script>
+      $(function () {
+        validateEmailForgotPassword = function () {
+          showModal("msg-modal");
+        };
+
+        $("body").on("submit", "#forgot-pass", function () {
+          validateEmailForgotPassword();
+          return false;
+        });
+
+        // CONTACT
+        validateContactForm = function () {
+          showModal("contact-modal");
+        };
+
+        $("body").on("submit", "#contact-form", function () {
+          validateContactForm();
+          return false;
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <div id="toggleMenu" class="modal modalMenu">
+      <div class="modal-block -center">
+        <div class="modal-inner">
+          <div class="hide-modal circle-close-btn">
+            <div class="custom-x-icon"></div>
+          </div>
+          <ul class="ul-toggleMenu">
+            <li>
+              <a href="index.html"> Home </a>
+            </li>
+            <li>
+              <a href="aboutus.html"> About us </a>
+            </li>
+            <li>
+              <a href="faq.html"> FAQS </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="sign-in-modal" class="modal">
+      <div class="modal-block -center">
+        <div class="modal-inner">
+          <div class="hide-modal circle-close-btn">
+            <div class="custom-x-icon"></div>
+          </div>
+          <div class="main-logo -med"></div>
+
+          <form action="index2.html" class="form-wrap -med">
+            <div class="input-block -floating">
+              <input placeholder=" " class="input" type="text" name="user" />
+              <label class="label -floating">Username</label>
+              <span class="error-txt">Username is incorrect!</span>
+            </div>
+            <!-- End input-block -->
+
+            <div class="input-block -floating">
+              <input
+                placeholder=" "
+                class="input"
+                type="password"
+                name="password"
+              />
+              <label class="label -floating">Password</label>
+              <!-- <span class="error-txt">Password is incorrect!</span> -->
+            </div>
+            <!-- End input-block -->
+
+            <div class="button-wrap">
+              <button type="submit" class="cmn-button -med -orange">
+                Sign in
+              </button>
+              <button
+                type="button"
+                class="cmn-button -med -transparent -block call-modal"
+                data-modal="forgot-modal"
+              >
+                Forgot passwords
+              </button>
+            </div>
+          </form>
+          <!-- End form-wrap -->
+        </div>
+        <!-- End modal-inner -->
+      </div>
+      <!-- End modal-block -->
+    </div>
+    <!-- End modal -->
+
+    <div id="forgot-modal" class="modal">
+      <div class="modal-block -center">
+        <div class="modal-inner">
+          <div class="hide-modal circle-close-btn">
+            <div class="custom-x-icon"></div>
+          </div>
+          <div class="main-logo -med"></div>
+
+          <form id="forgot-pass" action="" class="form-wrap -med">
+            <div class="input-block -floating">
+              <input placeholder=" " class="input" type="email" name="email" />
+              <label class="label -floating">Email</label>
+              <span class="error-txt">Email is incorrect!</span>
+            </div>
+            <!-- End input-block -->
+
+            <div class="button-wrap">
+              <button type="submit" class="cmn-button -med -orange">
+                Confirm
+              </button>
+            </div>
+          </form>
+          <!-- End form-wrap -->
+        </div>
+        <!-- End modal-inner -->
+      </div>
+      <!-- End modal-block -->
+    </div>
+    <!-- End modal -->
+
+    <!-- End modal -->
+    <div id="msg-modal" class="modal">
+      <div class="modal-block -center">
+        <div class="modal-inner">
+          <div class="hide-modal circle-close-btn">
+            <div class="custom-x-icon"></div>
+          </div>
+          <div class="main-logo -med"></div>
+
+          <div class="modal-content-block">
+            <p class="prg align-center">
+              The new password will be sent to your email please check your
+              inbox
+            </p>
+
+            <div class="button-wrap">
+              <button type="button" class="cmn-button hide-modal -med -orange">
+                Close
+              </button>
+            </div>
+          </div>
+          <!-- End modal-content-block -->
+        </div>
+        <!-- End modal-inner -->
+      </div>
+      <!-- End modal-block -->
+    </div>
+    <!-- End modal -->
+
+    <div id="contact-modal" class="modal">
+      <div class="modal-block -center">
+        <div class="modal-inner">
+          <div class="hide-modal circle-close-btn">
+            <div class="custom-x-icon"></div>
+          </div>
+          <div class="main-logo -med"></div>
+
+          <div class="modal-content-block">
+            <p class="prg align-center">We will contact you soon</p>
+
+            <div class="button-wrap">
+              <button type="button" class="cmn-button hide-modal -med -orange">
+                OK
+              </button>
+            </div>
+          </div>
+          <!-- End modal-content-block -->
+        </div>
+        <!-- End modal-inner -->
+      </div>
+      <!-- End modal-block -->
+    </div>
+    <!-- End modal -->
+
+    <header>
+      <a class="main-logo call-modal" data-modal="toggleMenu"></a>
+      <div class="header-left-bg"></div>
+      <div class="header-nav-bg"></div>
+
+      <nav class="header-nav">
+        <ul class="nav-list">
+          <li class="nal-list-item d-sm-none">
+            <a href="index.html" class="nav-list-txt">HOME</a>
+          </li>
+          <li class="nal-list-item d-sm-none">
+            <a href="aboutus.html" class="nav-list-txt">ABOUT US</a>
+          </li>
+          <li class="nal-list-item d-sm-none">
+            <a href="faq.html" class="nav-list-txt">FAQS</a>
+          </li>
+          <li class="nal-list-item">
+            <a href="#" class="nav-list-txt">Register</a>
+          </li>
+          <li class="nal-list-item -js">
+            <a
+              href="#"
+              class="nav-list-txt call-modal"
+              data-modal="sign-in-modal"
+              >Sign in</a
+            >
+          </li>
+        </ul>
+        <!-- End nav-list -->
+      </nav>
+      <!-- End header-nav -->
+    </header>
+    <!-- End header -->
+
+    <section class="info-block paddingOtherPage">
+      <h2 class="title green-txt -center">About Us</h2>
+
+      <div class="info-block-inner">
+        <p class="txtDetailAboutUs">
+          ASEC Frontier, founded in 2017, is a company led by Prof. Dr. Thapana
+          Boonlar as a Chief Executive Officer. The company focuses on the
+          development of medical platform which dedicates to deliver the latest
+          medical information including news and academic researches for medical
+          professionals.
+        </p>
+        <h1 class="green-txt mb-1">CEO greetings</h1>
+        <img src="./images/user/CEOpic.jpg" class="img-ceo" />
+        <p class="txtDetailAboutUs mt-1">
+          I am sincerely grateful for the support toward our ‘Medical Leaders
+          Thailand’ application. Our company, ASEC Frontier (Thailand) Co.,
+          Ltd., determines to administrate the business transparently and
+          beneficially for Thai society, especially to promote education and
+          medical issue. Our company starts to develop ‘Medical Leaders
+          Thailand’ to be a hub of medical information across the world that
+          up-to-date and reliable for our customers. we hope that in the future,
+          ‘Medical Leaders Thailand’ will alleviate medical issue gap in
+          Thailand. Customers can get medical information conveniently, quickly,
+          and effectively based on our reliable resources such as BMJ, JAMA, The
+          Lancet, Care Net, etc. We are also the only company in Thailand that
+          partners up with the biggest medical news site in Japan ‘Medical
+          Tribune’. We will continue to put all of our efforts to serve our
+          customer needs by providing reliability medical information with high
+          quality and support. We wish for the health and happiness to all
+          customers.
+        </p>
+        <p class="txtDetailAboutUs font-weight-bold">
+          Thank you<br />
+          Prof.Dr.Thapana Boonlar<br />
+          CEO of ASEC Frontier (Thailand) Co.,Ltd.
+        </p>
+
+        <h1 class="green-txt mb-1">Advisory</h1>
+
+        <div class="boxAdvisory">
+          <img src="./images/user/Piyachai.jpg" />
+          <div>
+            <p class="txtNameAdvisory">Dr. Piyachai Suthicham</p>
+            <p class="txtPositionAdvisory">
+              Executive Director of the Asian Institute of Logistics Foundation
+            </p>
+          </div>
+        </div>
+
+        <div class="boxAdvisory">
+          <img src="./images/user/Anan.jpg" />
+          <div>
+            <p class="txtNameAdvisory">Dr. Anan Boonsanong</p>
+            <p class="txtPositionAdvisory">
+              Director of Leadership development institute, Kirk University
+            </p>
+          </div>
+        </div>
+
+        <div class="boxAdvisory">
+          <img src="./images/user/Wiset.jpg" />
+          <div>
+            <p class="txtNameAdvisory">Dr. Wiset Sangkanjanavanich</p>
+            <p class="txtPositionAdvisory">
+              Vice President of the Doctor of Philosophy Program in Philosophy and Ethics
+            </p>
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-cols">
+          <h4>ASEC Frontier (Thailand) Co., Ltd.</h4>
+          <p>
+            Address : 1 Empire Tower, Unit 1509 15th floor South Sathorn road
+            Yannawa Sathorn Bangkok, Thailand 10120<br />
+            Tel : +662-118-0873<br />
+            Email : enquiries@medical-master-thailand.com<br />
+            Website :
+            <a
+              class="green-txt -underline"
+              href="http://www.asec-frontier.com"
+              target="_blank"
+              >www.asec-frontier.com</a
+            >
+          </p>
+          <br />
+
+          <h4>Social Media</h4>
+          <ul class="social-block">
+            <li class="social-list">
+              <a href="#" target="_blank"
+                ><img src="images/icons/line-icon.jpg" alt=""
+              /></a>
+            </li>
+            <li class="social-list">
+              <a href="#" target="_blank"
+                ><img src="images/icons/facebook-icon.jpg" alt=""
+              /></a>
+            </li>
+          </ul>
+          <!-- End social-block -->
+        </div>
+        <!-- End footer-cols -->
+
+        <div id="contact" class="footer-cols">
+          <h4>Contact Us</h4>
+
+          <form id="contact-form" action="" class="form-wrap">
+            <div class="input-block -floating">
+              <input
+                placeholder=" "
+                class="input -med"
+                type="text"
+                name="name"
+              />
+              <label class="label -floating">Your Name (*)</label>
+              <span class="error-txt">Please enter your name</span>
+            </div>
+            <!-- End input-block -->
+
+            <div class="input-block -floating">
+              <input
+                placeholder=" "
+                class="input -med"
+                type="email"
+                name="email"
+              />
+              <label class="label -floating">Your Email (*)</label>
+              <!-- <span class="error-txt">Your Email is incorrect!</span> -->
+            </div>
+            <!-- End input-block -->
+
+            <div class="input-block -floating">
+              <input
+                placeholder=" "
+                class="input -med"
+                type="email"
+                name="email"
+              />
+              <label class="label -floating">Subject (*)</label>
+              <!-- <span class="error-txt">Please enter your subject</span> -->
+            </div>
+            <!-- End input-block -->
+
+            <div class="input-block -floating">
+              <textarea
+                placeholder=" "
+                class="input -med"
+                type="text"
+                name="message"
+              ></textarea>
+              <label class="label -floating">Your Message (*)</label>
+              <!-- <span class="error-txt">Please enter your message</span> -->
+            </div>
+            <!-- End input-block -->
+
+            <div class="button-wrap">
+              <button type="submit" class="cmn-button -med -orange">
+                <span class="send-icon"></span> SEND
+              </button>
+            </div>
+          </form>
+          <!-- End form-wrap -->
+        </div>
+        <!-- End footer-cols -->
+      </div>
+      <!-- End footer-inner -->
+
+      <div class="footer-bottom">
+        © Medical Leaders Thailand. All Rights Reserved.
+      </div>
+
+      <div class="bg-1"></div>
+    </footer>
+
+    <div class="modal-overlay -js"></div>
+
+    <script type="text/javascript" src="js/swiper.min.js"></script>
+    <script>
+      var topBannerSwiper = new Swiper(".top-banner-swiper", {
+        loop: true,
+        effect: "fade",
+        fadeEffect: {
+          crossFade: true,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          type: "bullets",
+          clickable: true,
+        },
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+      });
+    </script>
+  </body>
+</html>
