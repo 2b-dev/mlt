@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Medical Leaders Thailand</title>
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/custom.css" />
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script>
+      $(function () {
+        validateEmailForgotPassword = function () {
+          showModal("msg-modal");
+        };
+
+        $("body").on("submit", "#forgot-pass", function () {
+          validateEmailForgotPassword();
+          return false;
+        });
+
+        // CONTACT
+        validateContactForm = function () {
+          showModal("contact-modal");
+        };
+
+        $("body").on("submit", "#contact-form", function () {
+          validateContactForm();
+          return false;
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <div id="sign-in-modal" class="modal">
+      <div class="modal-block -center">
+        <div class="modal-inner">
+          <div class="hide-modal circle-close-btn">
+            <div class="custom-x-icon"></div>
+          </div>
+          <div class="main-logo -med"></div>
+
+          <form action="index2.html" class="form-wrap -med">
+            <div class="input-block -floating">
+              <input placeholder=" " class="input" type="text" name="user" />
+              <label class="label -floating">Username</label>
+              <span class="error-txt">Username is incorrect!</span>
+            </div>
+            <!-- End input-block -->
+
+            <div class="input-block -floating">
+              <input
+                placeholder=" "
+                class="input"
+                type="password"
+                name="password"
+              />
+              <label class="label -floating">Password</label>
+              <!-- <span class="error-txt">Password is incorrect!</span> -->
+            </div>
+            <!-- End input-block -->
+
+            <div class="button-wrap">
+              <button type="submit" class="cmn-button -med -orange">
+                Sign in
+              </button>
+              <button
+                type="button"
+                class="cmn-button -med -transparent -block call-modal"
+                data-modal="forgot-modal"
+              >
+                Forgot passwords
+              </button>
+            </div>
+          </form>
+          <!-- End form-wrap -->
+        </div>
+        <!-- End modal-inner -->
+      </div>
+      <!-- End modal-block -->
+    </div>
+    <!-- End modal -->
+
+    <div id="forgot-modal" class="modal">
+      <div class="modal-block -center">
+        <div class="modal-inner">
+          <div class="hide-modal circle-close-btn">
+            <div class="custom-x-icon"></div>
+          </div>
+          <div class="main-logo -med"></div>
+
+          <form id="forgot-pass" action="" class="form-wrap -med">
+            <div class="input-block -floating">
+              <input placeholder=" " class="input" type="email" name="email" />
+              <label class="label -floating">Email</label>
+              <span class="error-txt">Email is incorrect!</span>
+            </div>
+            <!-- End input-block -->
+
+            <div class="button-wrap">
+              <button type="submit" class="cmn-button -med -orange">
+                Confirm
+              </button>
+            </div>
+          </form>
+          <!-- End form-wrap -->
+        </div>
+        <!-- End modal-inner -->
+      </div>
+      <!-- End modal-block -->
+    </div>
+    <!-- End modal -->
+
+    <div id="msg-modal" class="modal">
+      <div class="modal-block -center">
+        <div class="modal-inner">
+          <div class="hide-modal circle-close-btn">
+            <div class="custom-x-icon"></div>
+          </div>
+          <div class="main-logo -med"></div>
+
+          <div class="modal-content-block">
+            <p class="prg align-center">
+              The new password will be sent to your email please check your
+              inbox
+            </p>
+
+            <div class="button-wrap">
+              <button type="button" class="cmn-button hide-modal -med -orange">
+                Close
+              </button>
+            </div>
+          </div>
+          <!-- End modal-content-block -->
+        </div>
+        <!-- End modal-inner -->
+      </div>
+      <!-- End modal-block -->
+    </div>
+    <!-- End modal -->
+
+    <div id="contact-modal" class="modal">
+      <div class="modal-block -center">
+        <div class="modal-inner">
+          <div class="hide-modal circle-close-btn">
+            <div class="custom-x-icon"></div>
+          </div>
+          <div class="main-logo -med"></div>
+
+          <div class="modal-content-block">
+            <p class="prg align-center">We will contact you soon</p>
+
+            <div class="button-wrap">
+              <button type="button" class="cmn-button hide-modal -med -orange">
+                OK
+              </button>
+            </div>
+          </div>
+          <!-- End modal-content-block -->
+        </div>
+        <!-- End modal-inner -->
+      </div>
+      <!-- End modal-block -->
+    </div>
+    <!-- End modal -->
+
+    <header>
+      <a href="index.html" class="main-logo"></a>
+      <div class="header-left-bg"></div>
+      <div class="header-nav-bg"></div>
+
+      <nav class="header-nav">
+        <ul class="nav-list">
+          <li class="nal-list-item">
+            <a href="index.html" class="nav-list-txt">HOME</a>
+          </li>
+          <li class="nal-list-item">
+            <a href="aboutus.html" class="nav-list-txt">ABOUT US</a>
+          </li>
+          <li class="nal-list-item">
+            <a href="faq.html" class="nav-list-txt">FAQS</a>
+          </li>
+          <li class="nal-list-item">
+            <a href="#" class="nav-list-txt">Register</a>
+          </li>
+          <li class="nal-list-item -js">
+            <a
+              href="#"
+              class="nav-list-txt call-modal"
+              data-modal="sign-in-modal"
+              >Sign in</a
+            >
+          </li>
+        </ul>
+        <!-- End nav-list -->
+      </nav>
+      <!-- End header-nav -->
+    </header>
+    <!-- End header -->
+
+    <section class="banner-block-wrap">
+      <div class="banner-block swiper-container top-banner-swiper">
+        <div class="swiper-wrapper">
+          <div class="banner-list swiper-slide">
+            <figure class="banner-img">
+              <img src="images/banners/top-banner-01.jpg" alt="" />
+            </figure>
+            <figcaption class="banner-txt-block">
+              <strong
+                ><span class="sub-highlight"
+                  >The latest application assisting you to a promising future of
+                  Thai medical community
+                </span></strong
+              >
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Praesent tempus, est id placerat feugiat, risus arcu porta
+                tortor, nec convallis purus magna vitae justo. Suspendisse et
+                venenatis ligula.
+              </p>
+            </figcaption>
+          </div>
+          <!-- End banner-list -->
+        </div>
+        <!-- End swiper-wrapper -->
+
+        <div class="swiper-pagination"></div>
+      </div>
+      <!-- End banner-block -->
+
+      <nav class="main-nav">
+        <a href="index.html" class="main-logo"></a>
+
+        <ul class="main-nav-ul">
+          <li class="main-nav-li">
+            <a
+              href="#"
+              class="main-nav-hyperlink call-modal"
+              data-modal="sign-in-modal"
+            >
+              <span class="news-icon main-nav-icon"></span>
+              <span class="main-nav-txt">News</span>
+            </a>
+          </li>
+
+          <li class="main-nav-li">
+            <a
+              href="#"
+              class="main-nav-hyperlink call-modal"
+              data-modal="sign-in-modal"
+            >
+              <span class="hospital-icon main-nav-icon"></span>
+              <span class="main-nav-txt">Hospital</span>
+            </a>
+          </li>
+
+          <li class="main-nav-li">
+            <a
+              href="#"
+              class="main-nav-hyperlink call-modal"
+              data-modal="sign-in-modal"
+            >
+              <span class="board-icon main-nav-icon"></span>
+              <span class="main-nav-txt">Board</span>
+            </a>
+          </li>
+
+          <li class="main-nav-li">
+            <a href="#contact" class="main-nav-hyperlink">
+              <span class="letter-icon main-nav-icon"></span>
+              <span class="main-nav-txt">Contact</span>
+            </a>
+          </li>
+        </ul>
+        <!-- End main-nav-ul -->
+      </nav>
+      <!-- End main-nav -->
+    </section>
+    <!-- End banner-block-wrap -->
+
+    <section class="info-block almostwhite-bg -innerspace">
+      <div class="info-desc-block">
+        <h1 class="title green-txt">
+          Medical Leader<span class="txt-sup">s</span> Thailand
+        </h1>
+        <div class="info-banner-block">
+          <img src="images/banners/app-img-banner.png" alt="" />
+        </div>
+
+        <div class="app-info-block">
+          <h2 class="title green-txt -small">
+            <span class="app-logo"><span class="main-logo"></span></span>
+          </h2>
+          <a href="#" target="_blank" class="appstore-button"></a>
+          <a href="#" target="_blank" class="playstore-button"></a>
+        </div>
+        <!-- End app-info-block -->
+
+        <p class="prg">
+          Facilitate Thai healthcare professionals with global knowledge and
+          useful functions.
+        </p>
+
+        <div class="info-mlt">
+          <div class="list-card-info-mlt">
+            <img src="./images/icons/info_icon_1.png" />
+            <p>
+              Qualified sources of medical information to optimise the clinical
+              practices.
+            </p>
+          </div>
+          <div class="list-card-info-mlt">
+            <img src="./images/icons/info_icon_2.png" />
+            <p>
+              Exclusive and secure sharing of clinical experience and knowledge.
+            </p>
+          </div>
+          <div class="list-card-info-mlt">
+            <img src="./images/icons/info_icon_3.png" />
+            <p>
+              Easy usage with instant notification for time-effectiveness.
+            </p>
+          </div>
+          <div class="list-card-info-mlt">
+            <img src="./images/icons/info_icon_4.png" />
+            <p>
+              Customised function for partnerships.
+            </p>
+          </div>
+        </div>
+        <!-- End info-list-icon-block -->
+      </div>
+      <!-- End info-desc-box -->
+    </section>
+    <!-- End info-block -->
+
+    <section class="info-block">
+      <h2 class="title green-txt -center">Three functions</h2>
+
+      <div class="info-block-inner">
+        <nav class="square-block-nav">
+          <div class="square-block-list">
+            <div class="square-block-list-item">
+              <div class="square-block-icon">
+                <img src="images/icons/icon-01.png" alt="" />
+              </div>
+              <div class="square-block-txt-wrap">
+                <h3 class="txtTitleFuncions">News<br>Latest Daily Medical Information</h3>
+                <p>
+                  Updated medical literature from reliable sources with various kind of information such as news, journals, expert opinions, etc.
+                </p>
+              </div>
+            </div>
+            <div class="square-block-list-item">
+              <div class="square-block-icon">
+                <img src="images/icons/icon-02.png" alt="" />
+              </div>
+              <div class="square-block-txt-wrap">
+                <h3 class="txtTitleFuncions">Hospital<br>Intra-communication Tool</h3>
+                <p>
+                  Keep up with upcoming intra-hospital activities such as announcements, notifications and public relations, etc.
+                </p>
+                <div class="boxDetail">
+                  <div class="detailList">
+                    <div class="titleDetaillist">
+                      <img src="./images/icons/icon_function_1.png" />
+                      <p class="titleDetaillistText hospital">Announcement</p>
+                    </div>
+                    <p>The notifications about upcoming issues of your own hospital.</p>
+                  </div>
+                  <div class="detailList">
+                    <div class="titleDetaillist">
+                      <img src="./images/icons/icon_function_2.png" />
+                      <p class="titleDetaillistText hospital">Event</p>
+                    </div>
+                    <p>The notifications about upcoming issues of your own hospital.</p>
+                  </div>
+                  <p class="txtRemark">Remark: "Hospital" is only for partnerships</p>
+                </div>
+              </div>
+            </div>
+            <div class="square-block-list-item">
+              <div class="square-block-icon">
+                <img src="images/icons/icon-03.png" alt="" />
+              </div>
+              <div class="square-block-txt-wrap">
+                <h3 class="txtTitleFuncions">Board<br>Clinical Experience Sharing</h3>
+                <p>
+                  A space for exchanging and sharing medical information and experience.
+                </p>
+                <div class="boxDetail">
+                  <div class="detailList">
+                    <div class="titleDetaillist">
+                      <img src="./images/icons/icon_function_3.png" />
+                      <p class="titleDetaillistText board">Public</p>
+                    </div>
+                    <p>Openly exchange opinions across Thai healthcare community.</p>
+                  </div>
+                  <div class="detailList">
+                    <div class="titleDetaillist">
+                      <img src="./images/icons/icon_function_4.png" />
+                      <p class="titleDetaillistText board">Private</p>
+                    </div>
+                    <p>Exclusively discuss interesting cases within your own hospital.</p>
+                  </div>
+                  <p class="txtRemark">Remark: "Private" is only for partnerships</p>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+          <!-- End square-block-list -->
+        </nav>
+        <!-- End square-block-nav -->
+      </div>
+      <!-- End info-block-inner -->
+    </section>
+    <!-- End info-block -->
+
+    <section class="info-block">
+      <h2 class="title green-txt -center">Specialized Doctors</h2>
+
+      <div class="info-block-inner">
+        <p class="prg -center">
+          Excepteur sint occaecat cupidatat non proident sunt iculpa qui officia
+          deserunt mollit anim est. laborum sed perspiciatis unde omnis natus
+          error sit voluptatem accusantium dolore mque laudantium totam rem
+          aperiam.
+        </p>
+
+        <div class="doctor-list-block">
+          <div class="doctor-list-item">
+            <img src="images/doctors/doctor-01.jpg" alt="" />
+
+            <div class="doctor-info-block">
+              <div class="dr-name">Dr. Edward Gate</div>
+              <div class="dr-info green-txt-2">Cardiologist</div>
+            </div>
+            <!-- End doctor-info -->
+          </div>
+          <!-- End doctor-list-item -->
+
+          <div class="doctor-list-item">
+            <img src="images/doctors/doctor-02.jpg" alt="" />
+
+            <div class="doctor-info-block">
+              <div class="dr-name">Dr. Cataria Devon</div>
+              <div class="dr-info green-txt-2">Medicine</div>
+            </div>
+            <!-- End doctor-info -->
+          </div>
+          <!-- End doctor-list-item -->
+
+          <div class="doctor-list-item">
+            <img src="images/doctors/doctor-03.jpg" alt="" />
+
+            <div class="doctor-info-block">
+              <div class="dr-name">Dr. Clessenuer Marco</div>
+              <div class="dr-info green-txt-2">Dentist</div>
+            </div>
+            <!-- End doctor-info -->
+          </div>
+          <!-- End doctor-list-item -->
+        </div>
+        <!-- End doctor-list-block -->
+      </div>
+      <!-- End info-block-inner -->
+    </section>
+    <!-- End info-block -->
+
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-cols">
+          <h4>ASEC Frontier (Thailand) Co., Ltd.</h4>
+          <p>
+            Address : 1 Empire Tower, Unit 1509 15th floor South Sathorn road
+            Yannawa Sathorn Bangkok, Thailand 10120<br />
+            Tel : +662-118-0873<br />
+            Email : enquiries@medical-master-thailand.com<br />
+            Website :
+            <a
+              class="green-txt -underline"
+              href="http://www.asec-frontier.com"
+              target="_blank"
+              >www.asec-frontier.com</a
+            >
+          </p>
+          <br />
+
+          <h4>Social Media</h4>
+          <ul class="social-block">
+            <li class="social-list">
+              <a href="#" target="_blank"
+                ><img src="images/icons/line-icon.jpg" alt=""
+              /></a>
+            </li>
+            <li class="social-list">
+              <a href="#" target="_blank"
+                ><img src="images/icons/facebook-icon.jpg" alt=""
+              /></a>
+            </li>
+          </ul>
+          <!-- End social-block -->
+        </div>
+        <!-- End footer-cols -->
+
+        <div id="contact" class="footer-cols">
+          <h4>Contact Us</h4>
+
+          <form id="contact-form" action="" class="form-wrap">
+            <div class="input-block -floating">
+              <input
+                placeholder=" "
+                class="input -med"
+                type="text"
+                name="name"
+              />
+              <label class="label -floating">Your Name (*)</label>
+              <span class="error-txt">Please enter your name</span>
+            </div>
+            <!-- End input-block -->
+
+            <div class="input-block -floating">
+              <input
+                placeholder=" "
+                class="input -med"
+                type="email"
+                name="email"
+              />
+              <label class="label -floating">Your Email (*)</label>
+              <!-- <span class="error-txt">Your Email is incorrect!</span> -->
+            </div>
+            <!-- End input-block -->
+
+            <div class="input-block -floating">
+              <input
+                placeholder=" "
+                class="input -med"
+                type="email"
+                name="email"
+              />
+              <label class="label -floating">Subject (*)</label>
+              <!-- <span class="error-txt">Please enter your subject</span> -->
+            </div>
+            <!-- End input-block -->
+
+            <div class="input-block -floating">
+              <textarea
+                placeholder=" "
+                class="input -med"
+                type="text"
+                name="message"
+              ></textarea>
+              <label class="label -floating">Your Message (*)</label>
+              <!-- <span class="error-txt">Please enter your message</span> -->
+            </div>
+            <!-- End input-block -->
+
+            <div class="button-wrap">
+              <button type="submit" class="cmn-button -med -orange">
+                <span class="send-icon"></span> SEND
+              </button>
+            </div>
+          </form>
+          <!-- End form-wrap -->
+        </div>
+        <!-- End footer-cols -->
+      </div>
+      <!-- End footer-inner -->
+
+      <div class="footer-bottom">
+        © Medical Leaders Thailand. All Rights Reserved.
+      </div>
+
+      <div class="bg-1"></div>
+    </footer>
+
+    <div class="modal-overlay -js"></div>
+
+    <script type="text/javascript" src="js/swiper.min.js"></script>
+    <script>
+      var topBannerSwiper = new Swiper(".top-banner-swiper", {
+        loop: true,
+        effect: "fade",
+        fadeEffect: {
+          crossFade: true,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          type: "bullets",
+          clickable: true,
+        },
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+      });
+    </script>
+  </body>
+</html>

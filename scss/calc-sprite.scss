@@ -1,0 +1,5 @@
+@mixin sprite_autosize($left, $top, $width, $height, $width-sprite, $height-sprite) {
+  background-position: percentage($left / ($width-sprite - $width)) percentage($top / ($height-sprite - $height));
+  background-size: percentage(($width-sprite / $width)) percentage(($height-sprite / $height));
+}
+

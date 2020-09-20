@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Medical Leaders Thailand</title>
+  <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+  <link rel="stylesheet" type="text/css" href="css/main.min.css">
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+  
+  <script>
+    $(function(){
+      validateEmailForgotPassword = function(){
+        showModal('msg-modal');
+      }
+
+      $('body').on('submit','#forgot-pass',function(){
+        validateEmailForgotPassword();
+        return false;
+      });
+
+      // CONTACT
+      validateContactForm = function(){
+        showModal('contact-modal');
+      }
+
+      $('body').on('submit','#contact-form',function(){
+        validateContactForm();
+        return false;
+      });
+
+    });
+  </script>
+</head>
+
+<body>
+  <div id="sign-in-modal" class="modal">
+    <div class="modal-block -center">
+      <div class="modal-inner">
+        <div class="hide-modal circle-close-btn"><div class="custom-x-icon"></div></div>
+        <div class="main-logo -med"></div>
+
+        <form action="" class="form-wrap -med">
+          <div class="input-block -floating">
+            <input placeholder=" " class="input" type="text" name="user" />
+            <label class="label -floating">Username</label>
+            <span class="error-txt">Username is incorrect!</span>
+          </div>  <!-- End input-block -->
+          
+          <div class="input-block -floating">
+            <input placeholder=" " class="input" type="password" name="password" />
+            <label class="label -floating">Password</label>
+            <!-- <span class="error-txt">Password is incorrect!</span> -->
+          </div>  <!-- End input-block -->
+          
+          <div class="button-wrap">
+            <button type="submit" class="cmn-button -med -orange">Sign in</button>
+            <button type="button" class="cmn-button -med -transparent -block call-modal" data-modal="forgot-modal">Forgot passwords</button>
+          </div>
+        </form>  <!-- End form-wrap -->
+      </div>  <!-- End modal-inner -->
+    </div>  <!-- End modal-block -->
+  </div>  <!-- End modal -->
+  
+  <div id="forgot-modal" class="modal">
+    <div class="modal-block -center">
+      <div class="modal-inner">
+        <div class="hide-modal circle-close-btn"><div class="custom-x-icon"></div></div>
+        <div class="main-logo -med"></div>
+
+        <form id="forgot-pass" action="" class="form-wrap -med">
+          <div class="input-block -floating">
+            <input placeholder=" " class="input" type="email" name="email" />
+            <label class="label -floating">Email</label>
+            <span class="error-txt">Email is incorrect!</span>
+          </div>  <!-- End input-block -->
+          
+          <div class="button-wrap">
+            <button type="submit" class="cmn-button -med -orange">Confirm</button>
+          </div>
+        </form>  <!-- End form-wrap -->
+      </div>  <!-- End modal-inner -->
+    </div>  <!-- End modal-block -->
+  </div>  <!-- End modal -->
+
+  <div id="msg-modal" class="modal">
+    <div class="modal-block -center">
+      <div class="modal-inner">
+        <div class="hide-modal circle-close-btn"><div class="custom-x-icon"></div></div>
+        <div class="main-logo -med"></div>
+
+        <div class="modal-content-block">
+          <p class="prg align-center">The new password will be sent to your email please check your inbox</p>
+
+          <div class="button-wrap">
+            <button type="button" class="cmn-button hide-modal -med -orange">Close</button>
+          </div>
+        </div>  <!-- End modal-content-block -->
+      </div>  <!-- End modal-inner -->
+    </div>  <!-- End modal-block -->
+  </div>  <!-- End modal -->
+
+  <div id="contact-modal" class="modal">
+    <div class="modal-block -center">
+      <div class="modal-inner">
+        <div class="hide-modal circle-close-btn"><div class="custom-x-icon"></div></div>
+        <div class="main-logo -med"></div>
+
+        <div class="modal-content-block">
+          <p class="prg align-center">We will contact you soon</p>
+
+          <div class="button-wrap">
+            <button type="button" class="cmn-button hide-modal -med -orange">OK</button>
+          </div>
+        </div>  <!-- End modal-content-block -->
+      </div>  <!-- End modal-inner -->
+    </div>  <!-- End modal-block -->
+  </div>  <!-- End modal -->
+
+  <header>
+    <a href="index.html" class="main-logo"></a>
+    <div class="header-left-bg"></div>
+    <div class="header-nav-bg"></div>
+
+
+    <nav class="header-nav">
+      <ul class="nav-list">
+        <li class="nal-list-item">
+          <a href="my-page.html" class="nav-list-txt -profile">
+            My Page
+            <div class="user-block">
+              <div class="user-thumb">
+                  <img src="images/user/user-pic-01.jpg" alt="">
+              </div>
+            </div>
+          </a>
+          </li>
+        <li class="nal-list-item"><a href="#" class="nav-list-txt">Sign out</a></li>
+      </ul> <!-- End nav-list -->
+    </nav>  <!-- End header-nav -->
+  </header> <!-- End header -->
+
+  <nav class="main-nav -fix -top">
+    <a href="index.html" class="main-logo"></a>
+
+    <ul class="main-nav-ul">
+      <li class="main-nav-li">
+        <a href="news.html" class="main-nav-hyperlink">
+          <span class="news-icon main-nav-icon"></span>
+          <span class="main-nav-txt">News</span>
+        </a>
+      </li>
+
+      <li class="main-nav-li -actived">
+        <a href="hospital.html" class="main-nav-hyperlink">
+          <span class="hospital-icon main-nav-icon"></span>
+          <span class="main-nav-txt">Hospital</span>
+        </a>
+      </li>
+
+      <li class="main-nav-li">
+        <a href="board.html" class="main-nav-hyperlink">
+          <span class="board-icon main-nav-icon"></span>
+          <span class="main-nav-txt">Board</span>
+        </a>
+      </li>
+
+      <li class="main-nav-li">
+        <a href="#contact" class="main-nav-hyperlink">
+          <span class="letter-icon main-nav-icon"></span>
+          <span class="main-nav-txt">Contact</span>
+        </a>
+      </li>
+    </ul> <!-- End main-nav-ul -->
+  </nav>  <!-- End main-nav -->
+
+  <div class="main-nav-bg"></div>
+
+  <section class="info-block -spacetop">
+    <div class="article-block-wrap -full">
+        <div class="top-btn-block">
+            <a href="announcement.html" class="cmn-button back-btn -small -transparent">‹ Back</a>
+        </div>
+
+        <div class="article-block -full">
+            <div class="article-list -highlight">
+                <div class="article-thumb">
+                    <div><img src="images/news/news-detail-banner-01.jpg" alt="" /></div>
+                </div>
+
+                <div class="article-detail">
+                    <h2 class="article-title">ตารางวันหยุดปี 2563</h2>
+                    <div class="article-date">02/12/2019 09:55</div>
+                </div> <!-- End article-detail -->
+            </div>  <!-- End article-list -->            
+
+            <div class="article-prg">
+                <div class="article-main">
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+                </div>
+            </div>  <!-- End article-prg -->
+        </div>  <!-- End article-block -->
+    </div>  <!-- End article-block-wrap -->
+  </section>  <!-- End info-block -->
+
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-cols">
+        <h4>ASEC Frontier (Thailand) Co., Ltd.</h4>
+        <p>
+          Address : 1 Empire Tower, Unit 1509 15th floor South Sathorn road Yannawa Sathorn Bangkok, Thailand 10120<br/>
+          Tel : +662-118-0873<br/>
+          Email : enquiries@medical-master-thailand.com<br/>
+          Website : <a class="green-txt -underline" href="http://www.asec-frontier.com" target="_blank">www.asec-frontier.com</a>
+        </p><br/>
+
+        <h4>Social Media</h4>
+        <ul class="social-block">
+          <li class="social-list"><a href="#" target="_blank"><img src="images/icons/line-icon.jpg" alt="" /></a></li>
+          <li class="social-list"><a href="#" target="_blank"><img src="images/icons/facebook-icon.jpg" alt="" /></a></li>
+        </ul> <!-- End social-block -->
+      </div>  <!-- End footer-cols -->
+
+      <div id="contact" class="footer-cols">
+        <h4>Contact Us</h4>
+        
+        <form id="contact-form" action="" class="form-wrap">
+          <div class="input-block -floating">
+            <input placeholder=" " class="input -med" type="text" name="name" />
+            <label class="label -floating">Your Name (*)</label>
+            <span class="error-txt">Please enter your name</span>
+          </div>  <!-- End input-block -->
+          
+          <div class="input-block -floating">
+            <input placeholder=" " class="input -med" type="email" name="email" />
+            <label class="label -floating">Your Email (*)</label>
+            <!-- <span class="error-txt">Your Email is incorrect!</span> -->
+          </div>  <!-- End input-block -->
+
+          <div class="input-block -floating">
+            <input placeholder=" " class="input -med" type="email" name="email" />
+            <label class="label -floating">Subject (*)</label>
+            <!-- <span class="error-txt">Please enter your subject</span> -->
+          </div>  <!-- End input-block -->
+
+          <div class="input-block -floating">
+            <textarea placeholder=" " class="input -med" type="text" name="message"></textarea>
+            <label class="label -floating">Your Message (*)</label>
+            <!-- <span class="error-txt">Please enter your message</span> -->
+          </div>  <!-- End input-block -->
+          
+          <div class="button-wrap">
+            <button type="submit" class="cmn-button -med -orange"><span class="send-icon"></span> SEND</button>
+          </div>
+        </form>  <!-- End form-wrap -->
+      </div>  <!-- End footer-cols -->
+    </div>  <!-- End footer-inner -->
+
+    <div class="footer-bottom">© Medical Leaders Thailand. All Rights Reserved.</div>
+
+    <div class="bg-1"></div>
+  </footer>
+
+  <div class="modal-overlay -js"></div>
+</body>
+</html>

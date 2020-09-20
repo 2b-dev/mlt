@@ -1,0 +1,95 @@
+.info-mlt {
+  margin: 0 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  width: 100%;
+  flex-wrap: wrap;
+  padding: 0 0;
+}
+.info-mlt .list-card-info-mlt {
+  background-image: url("../images/bg/bg_info.jpg");
+  background-repeat: repeat-y;
+  background-size: 100% auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1rem 0.75rem;
+  width: 46%;
+  margin: 0 0;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex: 0 0 46%;
+  max-width: 46%;
+}
+.info-mlt .list-card-info-mlt img {
+  width: 80px;
+  height: auto;
+}
+.info-mlt .list-card-info-mlt p {
+  margin-bottom: 0;
+  color: #ffffff;
+  margin-top: 0;
+  font-size: 18px;
+  margin-left: 1.2rem;
+  position: relative;
+}
+.info-mlt .list-card-info-mlt p::before {
+    content: '';
+    position: absolute;
+    left: -15px;
+    top: 10px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #ffffff;
+}
+.square-block-nav .square-block-list-item h3.txtTitleFuncions{
+    font-size: 18px;
+    font-weight: 500;
+}
+.square-block-nav .square-block-list-item p{
+    font-weight: 300;
+}
+.boxDetail{
+  width: 100%;
+  text-align: left;
+  margin-top: 0.5rem;
+}
+.boxDetail .detailList{
+  width: 100%;
+  text-align: left;
+}
+.boxDetail .detailList .titleDetaillist{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: .5rem;
+}
+.boxDetail .detailList .titleDetaillist img{
+  width: 45px;
+  height: auto;
+  margin-right: .5rem;
+}
+.boxDetail .detailList .titleDetaillist .titleDetaillistText{
+  font-size: 20px;
+  font-weight: 500;
+}
+.boxDetail .detailList .titleDetaillist .titleDetaillistText.hospital{
+  color: #deba52;
+}
+.boxDetail .detailList .titleDetaillist .titleDetaillistText.board{
+  color: #d36d3d;
+}
+.boxDetail .detailList  p{
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+  color: #1c4947;
+}
+.boxDetail p.txtRemark{
+  font-size: 14px;
+}

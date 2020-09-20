@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Medical Leaders Thailand</title>
+  <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+  <link rel="stylesheet" type="text/css" href="css/main.min.css">
+  <link rel="stylesheet" type="text/css" href="css/datepicker.css">
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+  
+  <script>
+    $(function(){
+      validateEmailForgotPassword = function(){
+        showModal('msg-modal');
+      }
+
+      $('body').on('submit','#forgot-pass',function(){
+        validateEmailForgotPassword();
+        return false;
+      });
+
+      // CONTACT
+      validateContactForm = function(){
+        showModal('contact-modal');
+      }
+
+      $('body').on('submit','#contact-form',function(){
+        validateContactForm();
+        return false;
+      });
+
+      $("#date-picker").datepicker();
+      $('body').on('change','#latest-filter',function(){
+          $('#date-picker').val("");
+      });
+
+    });
+  </script>
+</head>
+
+<body>
+  <div id="sign-in-modal" class="modal">
+    <div class="modal-block -center">
+      <div class="modal-inner">
+        <div class="hide-modal circle-close-btn"><div class="custom-x-icon"></div></div>
+        <div class="main-logo -med"></div>
+
+        <form action="" class="form-wrap -med">
+          <div class="input-block -floating">
+            <input placeholder=" " class="input" type="text" name="user" />
+            <label class="label -floating">Username</label>
+            <span class="error-txt">Username is incorrect!</span>
+          </div>  <!-- End input-block -->
+          
+          <div class="input-block -floating">
+            <input placeholder=" " class="input" type="password" name="password" />
+            <label class="label -floating">Password</label>
+            <!-- <span class="error-txt">Password is incorrect!</span> -->
+          </div>  <!-- End input-block -->
+          
+          <div class="button-wrap">
+            <button type="submit" class="cmn-button -med -orange">Sign in</button>
+            <button type="button" class="cmn-button -med -transparent -block call-modal" data-modal="forgot-modal">Forgot passwords</button>
+          </div>
+        </form>  <!-- End form-wrap -->
+      </div>  <!-- End modal-inner -->
+    </div>  <!-- End modal-block -->
+  </div>  <!-- End modal -->
+  
+  <div id="forgot-modal" class="modal">
+    <div class="modal-block -center">
+      <div class="modal-inner">
+        <div class="hide-modal circle-close-btn"><div class="custom-x-icon"></div></div>
+        <div class="main-logo -med"></div>
+
+        <form id="forgot-pass" action="" class="form-wrap -med">
+          <div class="input-block -floating">
+            <input placeholder=" " class="input" type="email" name="email" />
+            <label class="label -floating">Email</label>
+            <span class="error-txt">Email is incorrect!</span>
+          </div>  <!-- End input-block -->
+          
+          <div class="button-wrap">
+            <button type="submit" class="cmn-button -med -orange">Confirm</button>
+          </div>
+        </form>  <!-- End form-wrap -->
+      </div>  <!-- End modal-inner -->
+    </div>  <!-- End modal-block -->
+  </div>  <!-- End modal -->
+
+  <div id="msg-modal" class="modal">
+    <div class="modal-block -center">
+      <div class="modal-inner">
+        <div class="hide-modal circle-close-btn"><div class="custom-x-icon"></div></div>
+        <div class="main-logo -med"></div>
+
+        <div class="modal-content-block">
+          <p class="prg align-center">The new password will be sent to your email please check your inbox</p>
+
+          <div class="button-wrap">
+            <button type="button" class="cmn-button hide-modal -med -orange">Close</button>
+          </div>
+        </div>  <!-- End modal-content-block -->
+      </div>  <!-- End modal-inner -->
+    </div>  <!-- End modal-block -->
+  </div>  <!-- End modal -->
+
+  <div id="contact-modal" class="modal">
+    <div class="modal-block -center">
+      <div class="modal-inner">
+        <div class="hide-modal circle-close-btn"><div class="custom-x-icon"></div></div>
+        <div class="main-logo -med"></div>
+
+        <div class="modal-content-block">
+          <p class="prg align-center">We will contact you soon</p>
+
+          <div class="button-wrap">
+            <button type="button" class="cmn-button hide-modal -med -orange">OK</button>
+          </div>
+        </div>  <!-- End modal-content-block -->
+      </div>  <!-- End modal-inner -->
+    </div>  <!-- End modal-block -->
+  </div>  <!-- End modal -->
+
+  <header>
+    <a href="index.html" class="main-logo"></a>
+    <div class="header-left-bg"></div>
+    <div class="header-nav-bg"></div>
+
+
+    <nav class="header-nav">
+      <ul class="nav-list">
+        <li class="nal-list-item">
+          <a href="my-page.html" class="nav-list-txt -profile">
+            My Page
+            <div class="user-block">
+              <div class="user-thumb">
+                  <img src="images/user/user-pic-01.jpg" alt="">
+              </div>
+            </div>
+          </a>
+          </li>
+        <li class="nal-list-item"><a href="#" class="nav-list-txt">Sign out</a></li>
+      </ul> <!-- End nav-list -->
+    </nav>  <!-- End header-nav -->
+  </header> <!-- End header -->
+
+  <nav class="main-nav -fix -top">
+    <a href="index.html" class="main-logo"></a>
+
+    <ul class="main-nav-ul">
+      <li class="main-nav-li">
+        <a href="news.html" class="main-nav-hyperlink">
+          <span class="news-icon main-nav-icon"></span>
+          <span class="main-nav-txt">News</span>
+        </a>
+      </li>
+
+      <li class="main-nav-li -actived">
+        <a href="hospital.html" class="main-nav-hyperlink">
+          <span class="hospital-icon main-nav-icon"></span>
+          <span class="main-nav-txt">Hospital</span>
+        </a>
+      </li>
+
+      <li class="main-nav-li">
+        <a href="board.html" class="main-nav-hyperlink">
+          <span class="board-icon main-nav-icon"></span>
+          <span class="main-nav-txt">Board</span>
+        </a>
+      </li>
+
+      <li class="main-nav-li">
+        <a href="#contact" class="main-nav-hyperlink">
+          <span class="letter-icon main-nav-icon"></span>
+          <span class="main-nav-txt">Contact</span>
+        </a>
+      </li>
+    </ul> <!-- End main-nav-ul -->
+  </nav>  <!-- End main-nav -->
+
+  <nav class="horizontal-nav-block">
+    <div class="horizontal-nav">
+        <div class="horizontal-item"><a href="hospital.html">Kasemrad Hospital</a></div>
+        <div class="horizontal-item -actived"><a href="hospital-1.html">World Medical Hospital</a></div>
+        <div class="horizontal-item"><a href="hospital-1.html">MLT Hospital</a></div>
+      </div>
+  </nav>    <!-- End horizontal-nav-block -->
+
+  <div class="main-nav-bg"></div>
+
+  <section class="info-block -innerspace">
+    <form action="">
+        <div class="filtering-block">
+            <div class="search-input-block">
+                <input placeholder="Enter keywords" class="search-input" type="search" autocomplete="off" />
+                <button class="submit-search-btn" type="submit"><span class="search-icon"></span></button>
+                <div class="error-txt">Please enter your keywords!</div>
+            </div>
+
+            <div class="custom-filter-wrap">
+                <span class="label">Sort by :</span>
+                
+                <div class="custom-radiobox-list">
+                    <div class="radiobox-list">
+                        <div class="custom-radiobox">
+                            <input class="radio-input" id="latest-filter" type="radio" name="filter-list" checked />
+                            <div class="radio-circle"></div>
+                        </div><label class="radio-label" for="latest-filter">Latest</label>
+                    </div>
+
+                    <div class="radiobox-list">
+                        <input class="radio-input -outside" id="date-month" type="radio" name="filter-list" />
+                        <div class="custom-radiobox">
+                            <div class="radio-circle"></div>
+                        </div>
+                    
+                        <div class="input-block -lock">
+                            <input id="date-picker" placeholder="Start Date" class="input" type="text" name="date" readonly />
+                        </div>
+                    </div>
+                </div>  <!-- End custom-radiobox-wrap -->
+                
+            </div>  <!-- End custom-filter-wrap -->
+        </div> <!-- End filtering-block -->
+
+
+        <div class="article-block-wrap">
+          <h3 class="hashtag-title green-txt">Announcement</h3>
+
+          <nav class="announcement-list">
+            <ul class="announcement-list-ul">
+                <li class="announcement-list-li">
+                    <a href="announcement-detail.html"><div class="anm-label">20/09/2019</div> <div class="anm-txt">ตารางวันหยุดปี 2563</div></a>
+                </li>
+
+                <li class="announcement-list-li">
+                    <a href="announcement-detail.html"><div class="anm-label">20/01/2020</div> <div class="anm-txt">ขอรับบริจาคเลือดได้ตั้งแต่วันที่ 12 ต.ค. 2020 เป็นต้นไป</div></a>
+                </li>
+
+                <li class="announcement-list-li">
+                    <a href="announcement-detail.html"><div class="anm-label">20/04/2020</div> <div class="anm-txt">การทำความสะอาดโดยน้ำยาฆ่าเชื้อบริเวณห้องพัก</div></a>
+                </li>
+            </ul>   <!-- End announcement-list-ul -->
+
+            <div class="button-wrap -right">
+              <a href="announcement.html" type="button" class="cmn-button -auto -underline -transparent">See all announcement <span class="custom-arrow -next -dark"></span></a>
+            </div>
+          </nav>    <!-- End announcement-list -->
+        </div>  <!-- End article-block-wrap -->
+    </form> <!-- End form -->
+  </section>  <!-- End info-block -->
+
+
+
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-cols">
+        <h4>ASEC Frontier (Thailand) Co., Ltd.</h4>
+        <p>
+          Address : 1 Empire Tower, Unit 1509 15th floor South Sathorn road Yannawa Sathorn Bangkok, Thailand 10120<br/>
+          Tel : +662-118-0873<br/>
+          Email : enquiries@medical-master-thailand.com<br/>
+          Website : <a class="green-txt -underline" href="http://www.asec-frontier.com" target="_blank">www.asec-frontier.com</a>
+        </p><br/>
+
+        <h4>Social Media</h4>
+        <ul class="social-block">
+          <li class="social-list"><a href="#" target="_blank"><img src="images/icons/line-icon.jpg" alt="" /></a></li>
+          <li class="social-list"><a href="#" target="_blank"><img src="images/icons/facebook-icon.jpg" alt="" /></a></li>
+        </ul> <!-- End social-block -->
+      </div>  <!-- End footer-cols -->
+
+      <div id="contact" class="footer-cols">
+        <h4>Contact Us</h4>
+        
+        <form id="contact-form" action="" class="form-wrap">
+          <div class="input-block -floating">
+            <input placeholder=" " class="input -med" type="text" name="name" />
+            <label class="label -floating">Your Name (*)</label>
+            <span class="error-txt">Please enter your name</span>
+          </div>  <!-- End input-block -->
+          
+          <div class="input-block -floating">
+            <input placeholder=" " class="input -med" type="email" name="email" />
+            <label class="label -floating">Your Email (*)</label>
+            <!-- <span class="error-txt">Your Email is incorrect!</span> -->
+          </div>  <!-- End input-block -->
+
+          <div class="input-block -floating">
+            <input placeholder=" " class="input -med" type="email" name="email" />
+            <label class="label -floating">Subject (*)</label>
+            <!-- <span class="error-txt">Please enter your subject</span> -->
+          </div>  <!-- End input-block -->
+
+          <div class="input-block -floating">
+            <textarea placeholder=" " class="input -med" type="text" name="message"></textarea>
+            <label class="label -floating">Your Message (*)</label>
+            <!-- <span class="error-txt">Please enter your message</span> -->
+          </div>  <!-- End input-block -->
+          
+          <div class="button-wrap">
+            <button type="submit" class="cmn-button -med -orange"><span class="send-icon"></span> SEND</button>
+          </div>
+        </form>  <!-- End form-wrap -->
+      </div>  <!-- End footer-cols -->
+    </div>  <!-- End footer-inner -->
+
+    <div class="footer-bottom">© Medical Leaders Thailand. All Rights Reserved.</div>
+
+    <div class="bg-1"></div>
+  </footer>
+
+  <div class="modal-overlay -js"></div>
+</body>
+</html>
