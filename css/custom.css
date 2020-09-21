@@ -246,6 +246,9 @@
 .nav-list .nal-list-item:last-of-type:before{
   display: block;
 }
+.pl-li{
+  padding-left: 0.9rem;
+}
 @media screen and (max-width: 767px){
   .info-mlt .list-card-info-mlt{
     width: 94%;
